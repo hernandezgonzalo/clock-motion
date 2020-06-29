@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Digit from "./Digit";
 import { Separator, Box } from "./styled";
 import { getTime } from "./time";
+import { GithubIcon } from "./GithubIcon";
 
 function App() {
   const [visible, setVisible] = useState({});
@@ -51,16 +52,19 @@ function App() {
   }, [time]);
 
   return (
-    <Box>
-      <Digit value={time.hoursDecimals} visible={visible.hoursDecimals} />
-      <Digit value={time.hoursUnits} visible={visible.hoursUnits} />
-      <Separator>:</Separator>
-      <Digit value={time.minutesDecimals} visible={visible.minutesDecimals} />
-      <Digit value={time.minutesUnits} visible={visible.minutesUnits} />
-      <Separator>:</Separator>
-      <Digit value={time.secondsDecimals} visible={visible.secondsDecimals} />
-      <Digit value={time.secondsUnits} visible={visible.secondsUnits} />
-    </Box>
+    <>
+      <Box>
+        <Digit value={time.hoursDecimals} visible={visible.hoursDecimals} />
+        <Digit value={time.hoursUnits} visible={visible.hoursUnits} />
+        <Separator>:</Separator>
+        <Digit value={time.minutesDecimals} visible={visible.minutesDecimals} />
+        <Digit value={time.minutesUnits} visible={visible.minutesUnits} />
+        <Separator>:</Separator>
+        <Digit value={time.secondsDecimals} visible={visible.secondsDecimals} />
+        <Digit value={time.secondsUnits} visible={visible.secondsUnits} />
+      </Box>
+      <GithubIcon />
+    </>
   );
 }
 
