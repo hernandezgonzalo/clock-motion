@@ -9,7 +9,7 @@ const Wrap = styled.div`
   display: flex;
   height: 40px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100vw;
 `;
 
