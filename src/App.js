@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
-import Digit from "./Digit";
-import { Separator, Box } from "./styled";
-import { getTime } from "./time";
-import { GithubIcon } from "./GithubIcon";
+import Digit from "./Components/Digit";
+import { getTime } from "./lib/time";
+import { GithubIcon } from "./Components/GithubIcon";
+import { Separator } from "./Components/Separator";
+import styled from "styled-components";
+
+const Box = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+`;
 
 function App() {
   const [visible, setVisible] = useState({});

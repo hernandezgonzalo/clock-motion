@@ -1,6 +1,20 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import { NumberWrap, Number } from "./styled";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+const NumberWrap = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 10vw;
+`;
+
+const Number = styled(motion.div)`
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14vw;
+`;
 
 const variants = {
   hidden: {
@@ -19,7 +33,7 @@ const variants = {
   }
 };
 
-function Digit({ value = 0, visible = true }) {
+const Digit = ({ value = 0, visible = true }) => {
   return (
     <NumberWrap>
       <AnimatePresence>
@@ -36,6 +50,6 @@ function Digit({ value = 0, visible = true }) {
       </AnimatePresence>
     </NumberWrap>
   );
-}
+};
 
 export default Digit;
