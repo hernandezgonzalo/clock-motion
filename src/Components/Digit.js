@@ -33,7 +33,7 @@ const variants = {
   }
 };
 
-const Digit = ({ value = 0, visible = true }) => {
+const Digit = ({ value, visible }) => {
   return (
     <NumberWrap>
       <AnimatePresence>
@@ -50,6 +50,11 @@ const Digit = ({ value = 0, visible = true }) => {
       </AnimatePresence>
     </NumberWrap>
   );
+};
+
+Digit.defaultProps = {
+  value: 0,
+  visible: true
 };
 
 export default Digit;
