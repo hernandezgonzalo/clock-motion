@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Digit from "./Components/Digit";
-import { getTime } from "./lib/time";
-import { GithubIcon } from "./Components/GithubIcon";
-import { Separator } from "./Components/Separator";
 import styled from "styled-components";
+import { getTime } from "lib/time";
+import { GithubIcon } from "Components/GithubIcon";
+import { Separator } from "Components/Separator";
+import Digit from "Components/Digit";
 
 const Box = styled.div`
   align-items: center;
